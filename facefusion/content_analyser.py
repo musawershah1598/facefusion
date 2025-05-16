@@ -65,6 +65,7 @@ def pre_check() -> bool:
 
 
 def analyse_stream(vision_frame : VisionFrame, video_fps : Fps) -> bool:
+	return False
 	global STREAM_COUNTER
 
 	STREAM_COUNTER = STREAM_COUNTER + 1
@@ -74,6 +75,7 @@ def analyse_stream(vision_frame : VisionFrame, video_fps : Fps) -> bool:
 
 
 def analyse_frame(vision_frame : VisionFrame) -> bool:
+	return False
 	nsfw_scores = detect_nsfw(vision_frame)
 
 	return len(nsfw_scores) > 0
